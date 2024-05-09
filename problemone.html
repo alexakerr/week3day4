@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Product Display</title>
+</head>
+<body>
+
+
+
+
+    <h2>Products</h2>
+    <div id="product-container"></div>
+
+
+
+
+
+    <script>
+    let products = [
+            { name: "Laptop", price: 999.99, description: "Powerful computing on the go" },
+            { name: "Smartphone", price: 699.99, description: "Stay connected wherever you are" },
+            { name: "Headphones", price: 149.99, description: "Immersive audio experience" }
+        ];
+
+
+
+
+
+        function displayProducts() {
+            let container = document.getElementById("product-container");
+            container.innerHTML = ""; //clears what was already there
+
+            products.forEach(product => {
+                let productDiv = document.createElement("div");
+                productDiv.innerHTML = `
+                    <h3>${product.name}</h3>
+                    <p><strong>Price:</strong> $${product.price}</p>
+                    <p><strong>Description:</strong> ${product.description}</p>
+                `;
+                container.appendChild(productDiv);
+            });
+        }
+
+      
+        displayProducts();
+    </script>
+</body>
+</html>

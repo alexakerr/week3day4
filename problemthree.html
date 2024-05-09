@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styling</title>
+<link rel="stylesheet" href="p3.css">
+
+
+</head>
+<body>
+
+<div id="box" onclick="changeColor()" onmouseover="hoverColor()" onmouseout="defaultColor()">Click me to change colors!</div>
+
+<button id="button" class="button" onclick="changeColor()">Change Color</button>
+
+<script> 
+
+function hoverColor() {
+  var box = document.getElementById("box");
+  box.style.backgroundColor = "purple";
+}
+
+function defaultColor() {
+  var box = document.getElementById("box");
+  box.style.backgroundColor = "pink";
+}
+</script>
+
+</body>
+</html>
